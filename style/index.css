@@ -1,0 +1,412 @@
+body{
+    background-color: #080808;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: none;
+}
+  
+* {
+    -ms-overflow-style: none;
+}
+
+.page-holder{
+    margin:20px;
+    padding:0px;
+    box-sizing: border-box;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    overflow: hidden;
+    border: 1px solid rgb(58, 58, 58);
+}
+#vanta-bg {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    box-sizing: border-box;
+
+}
+
+
+@media (max-width: 768px) {
+    .txt-holder {
+        width: 100% !important;
+    }
+    .info{
+        width: 100% !important;
+    }
+    .first-banner .info h1{
+        margin-left: 30px !important;
+        font-size: clamp(20px, 15vw , 3000px) !important;
+    }
+    .second-banner .info{
+        top: 25vw !important;
+    }
+    .second-banner .info .projects .border{
+        width: calc(100% - 40px) !important;
+        margin-left:20px !important;
+    }
+    .second-banner .info .projects .projects-list{
+        margin-left:20px !important;
+        width: calc(100% - 40px) !important;
+    }
+}
+
+
+.first-banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+.first-banner .txt-holder{
+    padding: 70px 0 0 70px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.first-banner .txt-holder h1{
+    color: white;
+    font-family: 'Raleway';
+    font-size: clamp(20px, 4vw, 50px);
+    font-weight: 300;
+    margin: 0;
+}
+
+.first-banner .txt-holder h2{
+    color: white;
+    font-family: 'Big Shoulders';
+    font-size: clamp(15px, 3.4vw, 40px);
+    font-weight: 300;
+    margin: 0;
+}
+
+.first-banner .txt-holder .refs{
+    margin-top: 7px;
+}
+
+.first-banner .txt-holder .refs img{
+    height: clamp(15px, 3vw, 30px);
+    margin-right: 10px;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.first-banner .txt-holder .refs img:hover{
+    opacity: 1;
+}
+
+.first-banner .txt-holder .txt-holder-1{
+    display: flex;
+    flex-direction: row;
+}
+
+
+@keyframes blincking {
+    0%{
+        opacity: 1;
+    }
+    49%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+
+
+}
+
+.blinking-tick{
+    animation: blincking 1s infinite;
+    height: clamp(15px, 3.4vw, 40px);
+    width: 5px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 6px;
+}
+
+.first-banner .info{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first-banner .info h1{
+    color: white;
+    font-family: 'Noto Serif Display';
+    font-size: clamp(20px, 9vw , 250px);
+    font-weight: 300;
+    font-style: italic;
+    margin:0;
+    margin-top: clamp(-50px, -4vw , -10px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.first-banner .info h1:hover{
+    color: rgb(254, 230, 145);
+    font-weight: 900;
+}
+
+.ticks-holder.top{
+    opacity: 0.4;
+    top: -10px;
+    transition: 0.3s;
+}
+
+.ticks-holder.top:hover{
+    opacity: 1;
+}
+
+.ticks-holder.top:hover > .left{
+    transform: rotateZ(-45deg) translateX(10px);
+    border-radius: 2.5px;
+
+}
+
+.ticks-holder.top:hover > .right{
+    transform: rotateZ(45deg) translateX(-10px);
+    border-radius: 2.5px;
+}
+
+.ticks-holder{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.ticks-holder div{
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.ticks-holder .left{
+    border-radius: 2.5px 0 0 2.5px;
+}
+
+.ticks-holder .right{
+    border-radius: 0 2.5px 2.5px 0;
+}
+
+.ticks-holder:hover > .left{
+    transform: rotateZ(45deg) translateX(10px);
+    border-radius: 2.5px;
+
+}
+
+.ticks-holder:hover > .right{
+    transform: rotateZ(-45deg) translateX(-10px);
+    border-radius: 2.5px;
+}
+
+.second-banner{
+    background-color: #080808;
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.second-banner .txt-holder{
+    padding: 70px 0 0 70px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.second-banner .txt-holder h1{
+    color: rgb(254, 230, 145);
+    font-family: 'Noto Serif Display';
+    font-size: clamp(20px, 4vw, 50px);
+    font-weight: 900;
+    margin: 0;
+}
+
+.second-banner .txt-holder h2{
+    color: white;
+    font-family: 'Big Shoulders';
+    font-size: clamp(15px, 3.4vw, 30px);
+    font-weight: 300;
+    margin: 0;
+}
+
+.second-banner .txt-holder .refs{
+    margin-top: 7px;
+}
+
+.second-banner .txt-holder .refs img{
+    height: clamp(15px, 3vw, 30px);
+    margin-right: 10px;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.second-banner .txt-holder .refs img:hover{
+    opacity: 1;
+}
+
+.second-banner .txt-holder .txt-holder-1{
+    display: flex;
+    flex-direction: row;
+}
+
+.second-banner .info{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.second-banner .info .projects h1{
+    color: white;
+    font-family: 'Raleway';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 4vw, 50px);
+    margin-top: 70px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.second-banner .info .projects{
+    width: 100%;
+}
+
+.second-banner .info .projects .border{
+    width: calc(100% - 150px);
+    margin-left:75px;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.second-banner .info .projects .projects-list{
+    height: calc(100% - 139px);
+    width: calc(100% - 150px);
+    margin-left:75px;
+    overflow-y: scroll;
+    background-color: #080808;
+}
+
+.projects-list .project{
+    position: relative;
+    width: 100%;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.projects-list .project h3{
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: clamp(15px, 3vw, 30px);
+    margin: 0;
+    transition: 0.3s;
+
+}
+
+.projects-list .project h4{
+    color: white;
+    font-family: 'Big Shoulders';
+    font-size: clamp(15px, 2.4vw, 23px);
+    position: absolute;
+    right: 15px;
+}
+
+.projects-list .project img{
+    width: 0;
+    transition: 0.2s;
+    filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(820%) hue-rotate(339deg) brightness(102%) contrast(104%);
+}
+
+.projects-list .project:hover img{
+    width: clamp(15px, 3vw, 30px);
+}
+
+.projects-list .project:hover h3{
+    color: rgb(254, 230, 145);
+}
+
+
+/*  */
+/* ABOUT */
+/* ABOUT */
+/* ABOUT */
+/* ABOUT */
+/* ABOUT */
+/*  */
+
+.third-banner{
+    background-color: #080808;
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+    overflow: hidden;
+    position: relative;
+}
+
+.third-banner .txt-holder{
+    padding: 70px 0 0 70px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.third-banner .txt-holder h1{
+    color: rgb(254, 230, 145);
+    font-family: 'Noto Serif Display';
+    font-size: clamp(20px, 4vw, 50px);
+    font-weight: 900;
+    margin: 0;
+}
+
+.third-banner .txt-holder h2{
+    color: white;
+    font-family: 'Big Shoulders';
+    font-size: clamp(15px, 3.4vw, 30px);
+    font-weight: 300;
+    margin: 0;
+}
