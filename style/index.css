@@ -48,6 +48,11 @@ body{
         margin-left: 30px !important;
         font-size: clamp(20px, 15vw , 3000px) !important;
     }
+    .third-banner .txt-holder .txt-holder-1 h2{
+        margin-left: -35px !important;
+        padding-right: 35px;
+    }
+
     .third-banner .info,
     .second-banner .info{
         top: 25vw !important;
