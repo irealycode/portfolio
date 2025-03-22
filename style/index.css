@@ -23,6 +23,7 @@ body{
     height: calc(100vh - 40px);
     overflow: hidden;
     border: 1px solid rgb(58, 58, 58);
+    position: relative;
 }
 #vanta-bg {
     width: calc(100vw - 40px);
@@ -47,13 +48,16 @@ body{
         margin-left: 30px !important;
         font-size: clamp(20px, 15vw , 3000px) !important;
     }
+    .third-banner .info,
     .second-banner .info{
         top: 25vw !important;
     }
+    .third-banner .info .expertise .border,
     .second-banner .info .projects .border{
         width: calc(100% - 40px) !important;
         margin-left:20px !important;
     }
+    .third-banner .info .expertise .expertise-list,
     .second-banner .info .projects .projects-list{
         margin-left:20px !important;
         width: calc(100% - 40px) !important;
@@ -169,6 +173,11 @@ body{
     font-weight: 900;
 }
 
+
+.first-banner .info .contact{
+
+}
+
 .ticks-holder.top{
     opacity: 0.4;
     top: -10px;
@@ -252,6 +261,7 @@ body{
     font-size: clamp(20px, 4vw, 50px);
     font-weight: 900;
     margin: 0;
+    /* font-style: italic; */
 }
 
 .second-banner .txt-holder h2{
@@ -309,6 +319,8 @@ body{
 
 .second-banner .info .projects{
     width: 100%;
+    max-height: 100%;
+
 }
 
 .second-banner .info .projects .border{
@@ -401,6 +413,8 @@ body{
     font-size: clamp(20px, 4vw, 50px);
     font-weight: 900;
     margin: 0;
+    /* font-style: italic; */
+
 }
 
 .third-banner .txt-holder h2{
@@ -409,4 +423,126 @@ body{
     font-size: clamp(15px, 3.4vw, 30px);
     font-weight: 300;
     margin: 0;
+}
+
+
+@keyframes tv {
+    0%{
+        background-color: #080808;
+        height: 100%;
+    }
+    80%{
+        background-color: #080808;
+    }
+    100%{
+        height: 0%;
+        background-color: #fff;
+    }
+}
+
+
+
+
+.tv-effect{
+    animation: tv 0.5s ;
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    align-self: center;
+    z-index: 3;
+    background-color: #080808;
+    bottom:50%;
+    top:50%;
+}
+
+
+
+
+.third-banner .info{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.third-banner .info .expertise h1{
+    color: white;
+    font-family: 'Raleway';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 4vw, 50px);
+    margin-top: 70px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.third-banner .info .expertise{
+    width: 100%;
+    max-height: 100%;
+}
+
+.third-banner .info .expertise .border{
+    width: calc(100% - 150px);
+    margin-left:75px;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.third-banner .info .expertise .expertise-list{
+    max-height: calc(100% - 139px);
+    width: calc(100% - 150px);
+    margin-left:75px;
+    overflow-y: scroll;
+    background-color: #080808;
+}
+
+.expertise-list .exp{
+    position: relative;
+    width: 100%;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.expertise-list .exp h3{
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: clamp(15px, 3vw, 30px);
+    margin: 0;
+    transition: 0.3s;
+
+}
+
+.expertise-list .exp h4{
+    color: white;
+    font-family: 'Big Shoulders';
+    font-size: clamp(15px, 2.4vw, 23px);
+    position: absolute;
+    right: 15px;
+}
+
+.expertise-list .exp img{
+    width: 0;
+    transition: 0.2s;
+    filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(820%) hue-rotate(339deg) brightness(102%) contrast(104%);
+}
+
+.expertise-list .exp:hover img{
+    width: clamp(15px, 3vw, 30px);
+}
+
+.expertise-list .exp:hover h3{
+    color: rgb(254, 230, 145);
 }
