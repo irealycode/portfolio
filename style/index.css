@@ -477,6 +477,35 @@ body{
     margin: 0;
 }
 
+@keyframes effect-holder {
+    0%{
+        z-index: 10;
+    }
+
+    99.99999%{
+        z-index: 10;
+        
+    }
+    100%{
+        z-index: -2;
+    }
+}
+
+
+.effect-holder{
+    animation: effect-holder 2.3s;
+    position: absolute;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    margin: 0px 0 0 20px;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 
 @keyframes tv {
     0%{
@@ -501,14 +530,11 @@ body{
 
 .tv-effect{
     animation: tv 2.3s ;
-    position: absolute;
     height: 0%;
     width: 100%;
     align-self: center;
     z-index: 3;
     background-color: #080808;
-    bottom:50%;
-    top:50%;
     display: flex;
     align-items: center;
     justify-content: center;
