@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./assets/logo.png" type="image/">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="./js/three.r134.min.js"></script>
     <!-- <script src="./js/p5.min.js"></script> -->
@@ -49,7 +50,12 @@
         <div class="tv-effect" >
             <h1>Sohaib Boulaich <span>Portfolio</span><span class="dot" >.</span></h1>
         </div>
-        <!-- <div class="tv-effect bot" ></div> -->
+        <!-- <div style="position: absolute;height: 100%;width: 100%;top: 0;left: 0;background-color: #080808;z-index: 10;" >
+            <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-top: 100px;" >
+                <h1 style="font-family: 'Noto Serif Display';font-weight: 900;color: white;margin: 0 30px 0 0;font-size: 200px;" >S</h1>
+                <div style="width: 50px;height: 200px;background-color: white;margin-top: -40px;" ></div>
+            </div>
+        </div> -->
         <div id="home" class="first-banner" >
             <div id="vanta-bg"></div>
             <div class="txt-holder" >
@@ -96,39 +102,72 @@
                     <div class="border" ></div>
                     <div class="projects-list" >
                         <div class="project" >
-                            <img src="./assets/arrow.svg" />
-                            <h3>Dentimo</h3>
-                            <h4>FULL STACK DEV</h4>
+                            <div onclick="showOrHideProject(0)" class="title" >
+                                <img src="./assets/arrow.svg" />
+                                <h3>Dentimo</h3>
+                                <h4>FULL STACK DEV</h4>
+                            </div>
+                            <div class="desc"  id="desc-0">
+                                <p>Dentimo is a dental clinic management system designed to streamline patient management, appointment scheduling, treatment tracking, and financial operations.</p>
+                                <!-- <div class="images">
+                                    <img src="./assets/dentimo/DentimoApps.PNG" />
+                                </div> -->
+                            </div>
                         </div>
 
-                        <div class="project" >
-                            <img src="./assets/arrow.svg" />
-                            <h3>Meak</h3>
-                            <h4>FULL STACK DEV</h4>
+                        <div onclick="showOrHideProject(1)" class="project" >
+                            <div class="title" >
+                                <img src="./assets/arrow.svg" />
+                                <h3>Meak</h3>
+                                <h4>FULL STACK DEV</h4>
+                            </div>
+                            <div class="desc"  id="desc-1">
+                                <p>Meak is an in-person services app based in Morocco, designed to connect users with professionals for various services.</p>
+                            </div>
                         </div>
 
-                        <div class="project" >
-                            <img src="./assets/arrow.svg" />
-                            <h3>We Dare Group</h3>
-                            <h4>FRONT END DEV</h4>
+                        <div onclick="showOrHideProject(2)" class="project" >
+                            <div class="title" >
+                                <img src="./assets/arrow.svg" />
+                                <h3>We Dare Group</h3>
+                                <h4>FRONT END DEV</h4>
+                            </div>
+                            <div class="desc"  id="desc-2">
+                                <p>WeDare Group is a consulting and IT services company specializing in digital transformation, project management, recruitment, and enterprise solutions like Salesforce (CRM) and SAP (ERP).</p>
+                            </div>
                         </div>
 
-                        <div class="project" >
-                            <img src="./assets/arrow.svg" />
-                            <h3>Chatify</h3>
-                            <h4>FRONT END DEV</h4>
+                        <div onclick="showOrHideProject(3)" class="project" >
+                            <div class="title" >
+                                <img src="./assets/arrow.svg" />
+                                <h3>Chatify</h3>
+                                <h4>FRONT END DEV</h4>
+                            </div> 
+                            <div class="desc"  id="desc-3">
+                                <p>Chatify is a fast and reliable personal chat app built on sockets, designed for real-time messaging with minimal latency.</p>
+                            </div>
                         </div>
 
-                        <div class="project" >
-                            <img src="./assets/arrow.svg" />
-                            <h3>Bunkerz</h3>
-                            <h4>FULL STACK DEV</h4>
+                        <div onclick="showOrHideProject(4)" class="project" >
+                            <div class="title" >
+                                <img src="./assets/arrow.svg" />
+                                <h3>Bunkerz</h3>
+                                <h4>FULL STACK DEV</h4>
+                            </div>
+                            <div class="desc"  id="desc-4">
+                                <p>Bunkerz is a personal project that helps users create dynamic dropshipping websites and manage their sales and their analytics.</p>
+                            </div>
                         </div>
 
-                        <div class="project" >
-                            <img src="./assets/arrow.svg" />
-                            <h3>Numbers</h3>
-                            <h4>FULL STACK DEV</h4>
+                        <div onclick="showOrHideProject(5)" class="project" >
+                            <div class="title" >
+                                <img src="./assets/arrow.svg" />
+                                <h3>Numbers</h3>
+                                <h4>FULL STACK DEV</h4>
+                            </div>
+                            <div class="desc"  id="desc-5">
+                                <p>Numbers is an innovative NFT trading platform where users trade unique numbers based on their rarity. The platform features a built-in wallet and transaction system, providing a seamless experience for buying, selling, and managing numbers.</p>
+                            </div>
                         </div>
 
                     </div>

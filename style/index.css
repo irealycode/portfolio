@@ -359,11 +359,48 @@ body{
     width: 100%;
     padding: 15px 15px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-sizing: border-box;
     align-items: center;
     cursor: pointer;
     border-bottom: 1px solid #333;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.project .title{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+}
+
+.project .desc{
+    display: flex;
+    flex-direction: column;
+    max-height:0px;
+    transition: 0.5s;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.project .desc p{
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: clamp(13px, 2vw, 18px);
+    margin: 0;
+}
+
+.project .desc .images{
+    margin: 10px 0 0 0;
+    width: 100%;
+    height: clamp(100px, 12vw, 150px);
+}
+.project .desc .images img{
+    height: 100%;
+    width: auto;
 }
 
 .projects-list .project h3{
@@ -384,13 +421,13 @@ body{
     right: 15px;
 }
 
-.projects-list .project img{
+.projects-list .project .title img{
     width: 0;
     transition: 0.2s;
     filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(820%) hue-rotate(339deg) brightness(102%) contrast(104%);
 }
 
-.projects-list .project:hover img{
+.projects-list .project:hover .title img{
     width: clamp(15px, 3vw, 30px);
 }
 
