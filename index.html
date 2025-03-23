@@ -44,8 +44,11 @@
     };
   </script>
 <body>
+    <p class="cr" >© Sohaib Boulaich</p>
     <div class="page-holder" >
-        <!-- <div class="tv-effect" ></div> -->
+        <div class="tv-effect" >
+            <h1>Sohaib Boulaich <span>Portfolio</span><span class="dot" >.</span></h1>
+        </div>
         <!-- <div class="tv-effect bot" ></div> -->
         <div id="home" class="first-banner" >
             <div id="vanta-bg"></div>
@@ -62,7 +65,7 @@
             <div class="info" >
                 <h1 onclick="switchPage(1)" >WORK</h1>
                 <h1 onclick="switchPage(2)" >ABOUT</h1>
-                <h1 class="contact" >CONTACT</h1>
+                <h1 onclick="switchContact(true)" class="contact" >CONTACT</h1>
             </div>
             <div onclick="switchPage(1)" class="ticks-holder">
                 <div class="left" ></div>
@@ -230,7 +233,28 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
+        <div id="contact" class="contact-banner" >
+            <div onclick="switchContact(false)" class="ticks-holder left">
+                <div class="left" ></div>
+                <div class="right" ></div>
+            </div>
+
+            <div class="txt-holder" >
+                <h1>CONTACT</h1>
+                <div class="txt-holder-1" >
+                    <h2>Let's get in touch ...</h2>
+                </div>
+            </div>
+
+            <div class="mailme" >
+                <p>Got a project idea or just want to chat? <br/>I'd love to hear from you—send me an email!</p>
+                <a href="mailto:sohaibboulaichppl@gmail.com" class="send" >
+                    <p>CONNECT</p>
+                    <img src="./assets/send.svg" />
+                </a>
+            </div>
+        </div>
     </div>
     
     
